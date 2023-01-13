@@ -38,9 +38,36 @@ function getCitiesByDept(zipcode) {
 getCitiesByDept(74);
 
 // exo 3.1
-
-
-
-function displayCity(city){
-    
+// Cette fonction filtre un tableau de villes et renvoie uniquement celles qui correspondent au code postal fourni
+function getCitiesByDept(zipcode, citie) {
+    // La méthode filtre parcourt le tableau de villes et ne renvoie que les éléments qui correspondent à la condition dans la fonction flèche
+    return (citie.filter(city => city.code.startsWith(zipcode)));
 }
+// Appeler la fonction et stocker le résultat dans les stocks variables
+let stocks = getCitiesByDept(74, cities);
+console.log(stocks);
+
+// Utilisez la méthode map pour extraire la propriété 'nom' de chaque objet de ville dans le tableau stocks
+const cities74 = stocks.map((e) => {
+    return e.nom;
+});
+console.log(cities74);
+
+
+
+
+
+// Exo 3.2
+
+
+// Cette fonction permet de trouver une ville dans un tableau de villes en utilisant son nom
+function getCitiesByName(name, cities) {
+    // La méthode find parcourt le tableau de villes et retourne la première ville qui correspond à la condition de la fonction flèche
+    return (cities.find(city => city.nom === name));
+}
+
+// Appel de la fonction en recherchant la ville "Annecy" dans le tableau "cities"
+let annecy = getCitiesByName("Annecy", cities);
+
+// Affichage de la ville "Annecy" dans la console
+console.log(annecy);
