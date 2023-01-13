@@ -71,3 +71,44 @@ let annecy = getCitiesByName("Annecy", cities);
 
 // Affichage de la ville "Annecy" dans la console
 console.log(annecy);
+
+// EXO 3.3
+
+
+function getCitiesByPopulation(zipcode, cities) {
+    let population1 = 0;
+    for (let i = 0; i < cities.length; i++) {
+    population1 = cities[i].population;
+    }
+    return console.log(' est de :  '+zipcode+ ' : ' + population1+'');
+}
+
+
+
+
+//exo 4 
+
+//1. La page html affiche "je suis une div"
+
+
+//2. Rien ne se passe 
+
+// crée en mémoire une structure de données pour stocker un div
+const el = document.createElement('div');
+el.innerHTML =  'Je suis un div';
+// insère le div dans le DOM (cela l'affiche)
+document.body.appendChild(el);
+
+
+function main(){
+    console.log(`${cities.length} communes chargées`);
+
+function ready(callback) {
+  if (document.readyState != 'loading'){
+    callback();
+  } else {
+    document.addEventListener('DOMContentLoaded', callback);
+  }
+}
+
+}
