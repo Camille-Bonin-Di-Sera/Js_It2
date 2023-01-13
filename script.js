@@ -100,15 +100,17 @@ el.innerHTML =  'Je suis un div';
 document.body.appendChild(el);
 
 
-function main(){
+function main() {
     console.log(`${cities.length} communes chargées`);
-
-function ready(callback) {
-  if (document.readyState != 'loading'){
-    callback();
-  } else {
-    document.addEventListener('DOMContentLoaded', callback);
   }
-}
-
-}
+  
+  function ready(callback) {
+    if (document.readyState != 'loading'){
+      callback();
+    } else {
+      document.addEventListener('DOMContentLoaded', callback);
+    }
+  }
+  
+  ready(main);
+  
